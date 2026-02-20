@@ -29,16 +29,17 @@ This project is a lightweight currency conversion tool designed to showcase best
 
 ## 🛠️ Tech Stack
 
-| Technology     | Description                         |
-|---------------|-------------------------------------|
-| React         | UI library (Functional Components)  |
-| Vite          | Build tool                          |
-| Tailwind CSS  | Utility-first styling               |
-| Fetch API     | Data fetching                       |
+| Technology    | Description                        |
+|--------------|------------------------------------|
+| React        | UI library (Functional Components) |
+| Vite         | Build tool                         |
+| Tailwind CSS | Utility-first styling              |
+| Fetch API    | Data fetching                      |
 
 ---
 
 ## 📂 Project Structure
+
 
 src/
 │
@@ -48,7 +49,7 @@ src/
 │
 ├── App.jsx # Main application logic
 ├── main.jsx # Application entry point
-├── index.css # Global styles (Tailwind)
+├── index.css # Global styles (Tailwind CSS)
 
 
 ---
@@ -60,19 +61,16 @@ src/
 ```bash
 git clone https://github.com/your-username/currency-converter.git
 cd currency-converter
-
-### 2. Install dependencies
+2. Install dependencies
 npm install
-### 3. Run the development server
+3. Run the development server
 npm run dev
 
 Open your browser at:
 
 http://localhost:5173
-
-
-### 2.🧠 Application Architecture
-### 1. State Management
+## 🧠 Application Architecture
+1. State Management
 
 The application uses React's built-in state management:
 
@@ -84,45 +82,51 @@ to → Target currency
 
 convertedAmount → Result of conversion
 
-### 2. Custom Hook: useCurrencyData
+## 2. Custom Hook: useCurrencyData
 
 Encapsulates API logic and provides exchange rate data based on the selected currency.
+
 const currencyInfo = useCurrencyData(from);
-Responsibilities:
+Responsibilities
 
 Fetch exchange rates from external API
+
 Update data when base currency changes
+
 Return parsed currency object
 
-### 3. Reusable Component: InputBox
+## 3. Reusable Component: InputBox
 
 A flexible input component that handles:
+
 Amount input
+
 Currency selection dropdown
+
 Disabled states
 
-### 1.Props:
-Prop	                           Description
-label	                           Currency label
-amount	                           Numeric value
-onAmountChange	                   Amount change handler
-onCurrencyChange	               Currency change handler
-currencyOptions	                   List of currencies
-selectCurrency	                   Selected currency
-amountDisable	                   Disable amount input
-currencyDisable	                   Disable dropdown
-
-
-###4. Conversion Logic
+Props
+Prop	Description
+label	Currency label
+amount	Numeric value
+onAmountChange	Amount change handler
+onCurrencyChange	Currency change handler
+currencyOptions	List of currencies
+selectCurrency	Selected currency
+amountDisable	Disable amount input
+currencyDisable	Disable dropdown
+## 4. Conversion Logic
 const convert = () => {
   setConvertedAmount(amount * currencyInfo[to]);
 };
 
 Uses fetched exchange rates
+
 Performs simple multiplication
+
 Triggered on form submit
 
-###5. Swap Logic
+## 5. Swap Logic
 const swap = () => {
   setFrom(to);
   setTo(from);
@@ -131,9 +135,10 @@ const swap = () => {
 };
 
 Swaps source and target currencies
+
 Exchanges input and output values
 
-🌐 API Reference
+## 🌐 API Reference
 
 This project uses a free currency API:
 
@@ -142,32 +147,42 @@ https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api
 Example endpoint:
 
 /latest/v1/currencies/usd.json
-🎨 UI & Styling
+## 🎨 UI & Styling
 
 Built with Tailwind CSS
+
 Gradient background
+
 Glassmorphism card effect
+
 Smooth hover animations
 
-⚠️ Limitations
+## ⚠️ Limitations
 
 No error handling for API failures
+
 No loading state implemented
+
 No caching of API responses
 
-🔮 Future Improvements
+## 🔮 Future Improvements
 
 Add loading spinner
+
 Add error handling and fallback UI
+
 Add currency search/filter
+
 Persist last selected currencies
+
 Add unit tests
+
 Support historical exchange rates
 
-📄 License
+## 📄 License
 
 This project is open-source and available under the MIT License.
 
-👨‍💻 Author
+## 👨‍💻 Author
 
-Developed by ZAYAN WARIS
+Developed by Zayan Waris
