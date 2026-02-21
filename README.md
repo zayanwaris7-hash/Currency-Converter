@@ -58,7 +58,7 @@ src/
 
 ### 1. Clone the repository
 
-```bash
+bash
 git clone https://github.com/your-username/currency-converter.git
 cd currency-converter
 2. Install dependencies
@@ -87,7 +87,7 @@ convertedAmount → Result of conversion
 Encapsulates API logic and provides exchange rate data based on the selected currency.
 
 const currencyInfo = useCurrencyData(from);
-Responsibilities
+ ## Responsibilities
 
 Fetch exchange rates from external API
 
@@ -105,16 +105,17 @@ Currency selection dropdown
 
 Disabled states
 
-Props
-Prop	Description
-label	Currency label
-amount	Numeric value
-onAmountChange	Amount change handler
-onCurrencyChange	Currency change handler
-currencyOptions	List of currencies
-selectCurrency	Selected currency
-amountDisable	Disable amount input
-currencyDisable	Disable dropdown
+## Props
+Prop	        Description
+label	        Currency label
+amount	      Numeric value
+onAmountChange	    Amount change handler
+onCurrencyChange	  Currency change handler
+currencyOptions	    List of currencies
+selectCurrency	    Selected currency
+amountDisable	     Disable amount input
+currencyDisable	   Disable dropdown
+
 ## 4. Conversion Logic
 const convert = () => {
   setConvertedAmount(amount * currencyInfo[to]);
