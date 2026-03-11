@@ -1,3 +1,11 @@
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./ActualCurrencyConverter # Replace with your folder name
+
+# ... rest of the code ...
 name: Deploy Vite React App
 
 on:
