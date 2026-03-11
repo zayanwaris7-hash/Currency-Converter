@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Point this to where Vite saves the build inside your folder
-          path: "./Currency Converter/dist"
+          path: "./ActualCurrencyConverter/"
 
       - name: Deploy to GitHub Pages
         id: deployment
